@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏯 济南行程 - 胶东半岛之旅</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page-styles.css" />
+    <style>
+        .page-header.jinan {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo jinan">🏯 济南攻略</div>
+        <div class="nav-links">
+            <a href="index.html">🏠 首页</a>
+            <a href="team.html">👥 队员</a>
+            <a href="weather.html">🌤️ 天气</a>
+            <a href="train.html">🚄 交通</a>
+            <a href="food.html">🍜 美食</a>
+            <a href="photo.html">📸 拍照</a>
+            <a href="hotel.html">🏨 住宿</a>
+            <a href="packing.html">🎒 清单</a>
+            <a href="budget.html">💰 预算</a>
+        </div>
+    </nav>
+
+    <header class="page-header jinan">
+        <div class="page-header-content">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+            <h1>🏯 济南 · 泉城 & 湖光</h1>
+            <p class="page-subtitle">Day 6 · 6月7日 · 最后一站</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">📍 必打卡景点</h2>
+            <div class="spot-grid">
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/9aA61wVkyR') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>⛲ 趵突泉</h3>
+                        <p class="spot-desc">天下第一泉 · 三窟并发</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 2小时</span>
+                            <span>🎫 40元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/Wc8T1wVkyR') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>🌊 大明湖</h3>
+                        <p class="spot-desc">四面荷花三面柳 · 泉城明珠</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 2-3小时</span>
+                            <span>🎫 免费</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📸 打卡点推荐</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/MK1u1wVkyR') center/cover;"></div>
+                    <p>⛲ 趵突泉 - 三股水</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/nz3B1wVkyR') center/cover;"></div>
+                    <p>🌸 大明湖 - 超然楼</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/5k4B1wVkyR') center/cover;"></div>
+                    <p>⛩️ 宽厚里 - 古街</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/7f9C1wVkyR') center/cover;"></div>
+                    <p>🌉 曲水亭街 - 小桥流水</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section map-section">
+            <h2 class="section-title">🗺️ 济南景点地图</h2>
+            <div class="map-container large">
+                <div id="map-jinan"></div>
+            </div>
+            <div class="map-tips">
+                <h4>📍 Citywalk路线推荐</h4>
+                <ul>
+                    <li><strong>经典线路</strong>：趵突泉 → 大明湖 → 曲水亭街 → 宽厚里</li>
+                    <li><strong>必打卡</strong>：趵突泉三股水、大明湖超然楼亮灯、曲水亭街老济南</li>
+                    <li><strong>美食推荐</strong>：宽厚里小吃街、芙蓉街老字号</li>
+                    <li><strong>Tips</strong>：超然楼晚上亮灯很漂亮，建议傍晚去</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section schedule-mini">
+            <h2 class="section-title">📅 轻松行程</h2>
+            <div class="mini-timeline">
+                <div class="mini-item">
+                    <div class="mini-time">Day 6</div>
+                    <div class="mini-content">
+                        <h4>6月7日 · 泉城一日游</h4>
+                        <ul>
+                            <li>🕘 09:00 退房，从烟台出发</li>
+                            <li>🕛 11:30 到达济南，入住酒店</li>
+                            <li>🕐 12:00 午餐：宽厚里/芙蓉街</li>
+                            <li>🕑 13:30 趵突泉（悠闲游览）</li>
+                            <li>🕓 16:00 大明湖（看日落）</li>
+                            <li>🕖 18:30 超然楼亮灯 · 晚餐</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="background: #fff3cd; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+                <h4 style="margin-bottom: 0.5rem;">💡 温馨提示</h4>
+                <p style="margin: 0; color: #856404;">6月7日是最后一天，济南玩完就可以返程了。建议买下午或晚上的返程票，从济南回各地都很方便（高铁1-2小时到北京、天津，3-4小时到合肥、杭州）。</p>
+            </div>
+        </section>
+    </main>
+
+    <nav class="page-nav">
+        <a href="index.html" class="nav-btn prev">🏠 返回首页</a>
+    </nav>
+
+    <footer class="footer">
+        <p>胶东半岛之旅 · 2026年6月2-7日</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">👥 如也(北京) · 本心(天津) · 秋凉(合肥) · 羲知(杭州)</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const jinanMap = L.map('map-jinan', {
+            center: [36.65, 116.98],
+            zoom: 14,
+            scrollWheelZoom: true
+        });
+        
+        L.tileLayer('https://webst0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+            subdomains: "1234"
+        }).addTo(jinanMap);
+
+        const jinanSpots = [
+            { name: '⛲ 趵突泉', coords: [36.6575, 116.9805], type: 'spot' },
+            { name: '🌊 大明湖', coords: [36.6430, 116.9950], type: 'spot' },
+            { name: '⛩️ 宽厚里', coords: [36.6510, 116.9820], type: 'food' },
+            { name: '🌉 曲水亭街', coords: [36.6540, 116.9780], type: 'spot' },
+            { name: '🏯 超然楼', coords: [36.6390, 116.9900], type: 'spot' }
+        ];
+
+        jinanSpots.forEach(spot => {
+            const color = spot.type === 'food' ? '#FF6B6B' : '#D2691E';
+            L.circleMarker(spot.coords, {
+                radius: 10,
+                fillColor: color,
+                color: '#fff',
+                weight: 2,
+                fillOpacity: 0.9
+            }).addTo(jinanMap).bindPopup(`<b>${spot.name}</b>`);
+        });
+
+        L.polyline([
+            [36.6510, 116.9820], [36.6575, 116.9805], [36.6540, 116.9780], [36.6430, 116.9950]
+        ], { color: '#D2691E', weight: 3, dashArray: '8,8' }).addTo(jinanMap);
+    </script>
+</body>
+</html>

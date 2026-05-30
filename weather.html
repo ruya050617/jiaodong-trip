@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌤️ 天气预报 - 胶东半岛之旅</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page-styles.css" />
+    <style>
+        .weather-header {
+            background: linear-gradient(135deg, #00B4D8 0%, #0077B6 100%);
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            color: white;
+        }
+        .weather-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+        .weather-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .city-weather-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        .city-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .city-icon {
+            font-size: 2.5rem;
+        }
+        .city-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .weather-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+        }
+        .weather-day {
+            text-align: center;
+            padding: 1rem 0.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+        .weather-day:hover {
+            background: #e3f2fd;
+            transform: translateY(-3px);
+        }
+        .weather-day .date {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        .weather-day .icon {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+        .weather-day .temp {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0077B6;
+        }
+        .weather-day .condition {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+        .weather-day .wind {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 0.3rem;
+        }
+        .weather-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .summary-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .summary-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .summary-card h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+        .summary-card p {
+            color: #666;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 900px) {
+            .weather-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .weather-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .weather-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">🌊 胶东之旅</div>
+        <div class="nav-links">
+            <a href="index.html">🏠 首页</a>
+            <a href="team.html">👥 队员</a>
+            <a href="weather.html" class="active">🌤️ 天气</a>
+            <a href="train.html">🚄 交通</a>
+            <a href="food.html">🍜 美食</a>
+            <a href="photo.html">📸 拍照</a>
+            <a href="hotel.html">🏨 住宿</a>
+            <a href="packing.html">🎒 行李</a>
+            <a href="budget.html">💰 预算</a>
+        </div>
+    </nav>
+
+    <div class="weather-header">
+        <h1>🌤️ 天气预报</h1>
+        <p>青岛 · 威海 · 烟台 三城一周天气</p>
+    </div>
+
+    <main class="container" style="padding-top: 2rem;">
+        <section class="city-weather-section">
+            <div class="city-title">
+                <span class="city-icon">🏛️</span>
+                <div>
+                    <div class="city-name">青岛 · 6月1日-7日</div>
+                </div>
+            </div>
+            <div class="weather-grid">
+                <div class="weather-day">
+                    <div class="date">6月1日<br>周日</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">24°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">东南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月2日<br>周一</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">25°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">南风2级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月3日<br>周二</div>
+                    <div class="icon">⛅</div>
+                    <div class="temp">23°</div>
+                    <div class="condition">多云</div>
+                    <div class="wind">东南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月4日<br>周三</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">24°</div>
+                    <div class="condition">晴转多云</div>
+                    <div class="wind">东南风2级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月5日<br>周四</div>
+                    <div class="icon">🌤️</div>
+                    <div class="temp">26°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">东南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月6日<br>周五</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">27°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月7日<br>周六</div>
+                    <div class="icon">⛅</div>
+                    <div class="temp">25°</div>
+                    <div class="condition">多云</div>
+                    <div class="wind">东南风4级</div>
+                </div>
+            </div>
+            <div class="weather-summary">
+                <div class="summary-card">
+                    <div class="icon">☀️</div>
+                    <h4>穿衣指数</h4>
+                    <p>短袖+薄外套</p>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">🧴</div>
+                    <h4>防晒指数</h4>
+                    <p>SPF50+必涂</p>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">🌊</div>
+                    <h4>海边体感</h4>
+                    <p>海风凉爽</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="city-weather-section">
+            <div class="city-title">
+                <span class="city-icon">🌅</span>
+                <div>
+                    <div class="city-name">威海 · 6月1日-7日</div>
+                </div>
+            </div>
+            <div class="weather-grid">
+                <div class="weather-day">
+                    <div class="date">6月1日<br>周日</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">23°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">东风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月2日<br>周一</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">24°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">东南风2级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月3日<br>周二</div>
+                    <div class="icon">⛅</div>
+                    <div class="temp">22°</div>
+                    <div class="condition">多云</div>
+                    <div class="wind">东南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月4日<br>周三</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">24°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">南风2级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月5日<br>周四</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">25°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">东南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月6日<br>周五</div>
+                    <div class="icon">🌤️</div>
+                    <div class="temp">26°</div>
+                    <div class="condition">晴转多云</div>
+                    <div class="wind">南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月7日<br>周六</div>
+                    <div class="icon">🌧️</div>
+                    <div class="temp">23°</div>
+                    <div class="condition">小雨</div>
+                    <div class="wind">东南风4级</div>
+                </div>
+            </div>
+            <div class="weather-summary">
+                <div class="summary-card">
+                    <div class="icon">☀️</div>
+                    <h4>穿衣指数</h4>
+                    <p>薄外套必备</p>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">🧴</div>
+                    <h4>防晒指数</h4>
+                    <p>紫外线较强</p>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">🌊</div>
+                    <h4>海边体感</h4>
+                    <p>海风较大</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="city-weather-section">
+            <div class="city-title">
+                <span class="city-icon">🏝️</span>
+                <div>
+                    <div class="city-name">烟台 · 6月1日-7日</div>
+                </div>
+            </div>
+            <div class="weather-grid">
+                <div class="weather-day">
+                    <div class="date">6月1日<br>周日</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">25°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">东南风2级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月2日<br>周一</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">26°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">南风2级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月3日<br>周二</div>
+                    <div class="icon">⛅</div>
+                    <div class="temp">24°</div>
+                    <div class="condition">多云</div>
+                    <div class="wind">东南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月4日<br>周三</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">25°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">东南风2级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月5日<br>周四</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">27°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">南风3级</div>
+</div>
+                <div class="weather-day">
+                    <div class="date">6月6日<br>周五</div>
+                    <div class="icon">☀️</div>
+                    <div class="temp">28°</div>
+                    <div class="condition">晴</div>
+                    <div class="wind">南风3级</div>
+                </div>
+                <div class="weather-day">
+                    <div class="date">6月7日<br>周六</div>
+                    <div class="icon">🌤️</div>
+                    <div class="temp">26°</div>
+                    <div class="condition">多云转晴</div>
+                    <div class="wind">东南风2级</div>
+                </div>
+            </div>
+            <div class="weather-summary">
+                <div class="summary-card">
+                    <div class="icon">👔</div>
+                    <h4>穿衣指数</h4>
+                    <p>夏装+薄外套</p>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">🧴</div>
+                    <h4>防晒指数</h4>
+                    <p>SPF50+，每2小时补涂</p>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">🌊</div>
+                    <h4>海边体感</h4>
+                    <p>海风凉爽舒适</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="city-weather-section">
+            <div class="city-title" style="justify-content: center;">
+                <span class="city-icon">📌</span>
+                <div>
+                    <div class="city-name">出行提醒</div>
+                </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                <div class="summary-card">
+                    <div class="icon">🌞</div>
+                    <h4>防晒必备</h4>
+                    <p>防晒霜SPF50+、墨镜、帽子</p>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">🌅</div>
+                    <h4>日落时间</h4>
+                    <p>约19:00-19:30</p>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">💊</div>
+                    <h4>必备药品</h4>
+                    <p>肠胃药、创可贴</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="page-nav" style="padding: 2rem; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between;">
+        <a href="team.html" style="padding: 0.8rem 1.5rem; background: white; color: #0077B6; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">← 队员介绍</a>
+        <a href="train.html" style="padding: 0.8rem 1.5rem; background: #0077B6; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 5px 20px rgba(0,119,182,0.3);">交通攻略 →</a>
+    </nav>
+
+    <footer style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #0077B6, #00B4D8); color: white;">
+        <p style="font-size: 1.1rem;">胶东半岛之旅 · 2026年6月2-7日</p>
+    </footer>
+</body>
+</html>

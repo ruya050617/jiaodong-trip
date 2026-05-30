@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌅 威海行程 - 胶东半岛之旅</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page-styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo weihai">🌅 威海攻略</div>
+        <div class="nav-links">
+            <a href="index.html">🏠 首页</a>
+            <a href="team.html">👥 队员</a>
+            <a href="weather.html">🌤️ 天气</a>
+            <a href="train.html">🚄 交通</a>
+            <a href="food.html">🍜 美食</a>
+            <a href="photo.html">📸 拍照</a>
+            <a href="hotel.html">🏨 住宿</a>
+            <a href="packing.html">🎒 清单</a>
+            <a href="budget.html">💰 预算</a>
+        </div>
+    </nav>
+
+    <header class="page-header weihai">
+        <div class="page-header-content">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+            <h1>🌅 威海 · 布鲁维斯号 & 火炬八街</h1>
+            <p class="page-subtitle">Day 3 · 6月4日</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">📍 必打卡景点</h2>
+            <div class="spot-grid">
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/pnNc1wVkyP') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>🚢 布鲁维斯号沉船</h3>
+                        <p class="spot-desc">搁浅货轮 · ins风大片</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 1-2小时</span>
+                            <span>🎫 免费</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/PmAm1wVkyP') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>🎬 火炬八街</h3>
+                        <p class="spot-desc">威海小镰仓 · 动漫风街道</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 1小时</span>
+                            <span>🎫 免费</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-card">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/Yrja1wVkyP') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>🏖️ 那香海钻石沙滩</h3>
+                        <p class="spot-desc">踩沙戏水 · 日落绝佳</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 2小时</span>
+                            <span>🎫 免费</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📸 布鲁维斯号打卡点</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/HbW01wVkyP') center/cover;"></div>
+                    <p>🚢 沉船全景 - 远处拍摄</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/YN3N1wVkyP') center/cover;"></div>
+                    <p>🌊 沉船与海浪 - 破碎感</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/e0sB1wVkyP') center/cover;"></div>
+                    <p>🌅 日落余晖 - 氛围感满满</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/mntz1wVkyP') center/cover;"></div>
+                    <p>🏖️ 那香海沙滩 - 钻石沙滩</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📸 火炬八街 & 那香海打卡点</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/imGq1wVkyP') center/cover;"></div>
+                    <p>🎬 火炬八街 - 多巴胺街道</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/BJOS1wVkyP') center/cover;"></div>
+                    <p>🏖️ 那香海 - 海岸线</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/upHh1wVkyP') center/cover;"></div>
+                    <p>🌅 海边日落 - 晚霞满天</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/IrNV1wVkyP') center/cover;"></div>
+                    <p>📷 创意市集 - 文创摊位</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section map-section">
+            <h2 class="section-title">🗺️ 威海景点地图</h2>
+            <div class="map-container large">
+                <div id="map-weihai"></div>
+            </div>
+            <div class="map-tips">
+                <h4>📍 打卡小贴士</h4>
+                <ul>
+                    <li><strong>布鲁维斯号</strong>：导航"成山镇海域"，建议日落时分拍照最有氛围</li>
+                    <li><strong>最佳时间</strong>：上午9-11点，光线从侧面照射</li>
+                    <li><strong>火炬八街</strong>：路口与海边小路结合，拍摄日系感</li>
+                    <li><strong>穿搭建议</strong>：白色/浅色衣服 + 草帽，拍出清新感</li>
+                    <li><strong>安全提示</strong>：沉船附近注意安全，不要下海</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section schedule-mini">
+            <h2 class="section-title">📅 Day 3 详细行程</h2>
+            <div class="mini-timeline">
+                <div class="mini-item">
+                    <div class="mini-time">6月4日</div>
+                    <div class="mini-content">
+                        <h4>威海探秘 · 从青岛出发</h4>
+                        <ul>
+                            <li>🕖 07:30 退房出发</li>
+                            <li>🕘 09:00 青岛 → 威海（高铁2h）</li>
+                            <li>🕙 10:00 布鲁维斯号沉船打卡</li>
+                            <li>🕛 12:30 附近海鲜午餐</li>
+                            <li>🕑 14:00 火炬八街Citywalk</li>
+                            <li>🕓 16:30 那香海钻石沙滩（日落）</li>
+                            <li>🕕 18:30 威海 → 烟台（高铁1h）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="page-nav">
+        <a href="qingdao.html" class="nav-btn prev">← 青岛行程</a>
+        <a href="yantai.html" class="nav-btn next">🏝️ 烟台行程 →</a>
+    </nav>
+
+    <footer class="footer">
+        <p>胶东半岛之旅 · 2026年6月2-7日</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const weihaiMap = L.map('map-weihai', {
+            center: [37.3, 122.6],
+            zoom: 10,
+            scrollWheelZoom: true
+        });
+        
+        L.tileLayer('https://webst0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+            subdomains: "1234"
+        }).addTo(weihaiMap);
+
+        const weihaiSpots = [
+            { name: '🚢 布鲁维斯号', coords: [37.3948, 122.6954], type: 'spot' },
+            { name: '🎬 火炬八街', coords: [37.2007, 122.5549], type: 'spot' },
+            { name: '🏖️ 那香海', coords: [37.3580, 122.5600], type: 'spot' }
+        ];
+
+        weihaiSpots.forEach(spot => {
+            L.circleMarker(spot.coords, {
+                radius: 10,
+                fillColor: '#43E97B',
+                color: '#fff',
+                weight: 2,
+                fillOpacity: 0.9
+            }).addTo(weihaiMap).bindPopup(`<b>${spot.name}</b>`);
+        });
+
+        L.polyline([
+            [37.3948, 122.6954], [37.3580, 122.5600], [37.2007, 122.5549]
+        ], { color: '#43E97B', weight: 3, dashArray: '8,8' }).addTo(weihaiMap);
+    </script>
+</body>
+</html>

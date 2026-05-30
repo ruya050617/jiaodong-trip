@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胶东半岛之旅 - 4人小队旅游攻略</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <style>
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .module-card {
+            background: white;
+            padding: 2rem 1rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .module-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .module-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .module-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .team-grid a {
+            text-decoration: none;
+        }
+        .hero {
+            height: 50vh;
+        }
+        .city-nav {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .city-btn {
+            text-decoration: none;
+            padding: 2rem;
+            border-radius: 20px;
+            color: white;
+            min-width: 140px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">🌊 胶东之旅</div>
+        <div class="nav-links">
+            <a href="index.html">🏠 首页</a>
+            <a href="team.html">👥 队员</a>
+            <a href="weather.html">🌤️ 天气</a>
+            <a href="train.html">🚄 交通</a>
+            <a href="food.html">🍜 美食</a>
+            <a href="photo.html">📸 拍照</a>
+            <a href="hotel.html">🏨 住宿</a>
+            <a href="packing.html">🎒 清单</a>
+            <a href="budget.html">💰 预算</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>🌊 胶东半岛之旅</h1>
+            <p class="subtitle">2026年6月2-7日 · 6天5晚 · 4人小队</p>
+            <div class="route-tags">
+                <span class="tag" onclick="location.href='qingdao.html'">🏛️ 青岛</span>
+                <span class="tag" onclick="location.href='weihai.html'">🌅 威海</span>
+                <span class="tag" onclick="location.href='yantai.html'">🏝️ 烟台</span>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <main class="container">
+        <section class="section" style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">👥 小队成员</h2>
+            <div class="team-grid">
+                <a href="team.html" class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">如</div>
+                    <div class="team-info">
+                        <h3>如也</h3>
+                        <p>📍 北京</p>
+                    </div>
+                </a>
+                <a href="team.html" class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">心</div>
+                    <div class="team-info">
+                        <h3>本心</h3>
+                        <p>📍 天津</p>
+                    </div>
+                </a>
+                <a href="team.html" class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">凉</div>
+                    <div class="team-info">
+                        <h3>秋凉</h3>
+                        <p>📍 合肥</p>
+                    </div>
+                </a>
+                <a href="team.html" class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">知</div>
+                    <div class="team-info">
+                        <h3>羲知</h3>
+                        <p>📍 杭州</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 style="text-align: center; margin-bottom: 1rem;">🗺️ 行程预览</h2>
+            <div class="city-nav" style="margin-bottom: 2rem;">
+                <a href="qingdao.html" class="city-btn qingdao">
+                    <span class="city-icon">🏛️</span>
+                    <span class="city-name">青岛</span>
+                    <span class="city-days">Day 1-2</span>
+                </a>
+                <a href="weihai.html" class="city-btn weihai">
+                    <span class="city-icon">🌅</span>
+                    <span class="city-name">威海</span>
+                    <span class="city-days">Day 3</span>
+                </a>
+                <a href="yantai.html" class="city-btn yantai">
+                    <span class="city-icon">🏝️</span>
+                    <span class="city-name">烟台</span>
+                    <span class="city-days">Day 4-5</span>
+                </a>
+                <a href="jinan.html" class="city-btn jinan">
+                    <span class="city-icon">🏯</span>
+                    <span class="city-name">济南</span>
+                    <span class="city-days">Day 6</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 style="text-align: center; margin-bottom: 1rem;">📱 攻略模块</h2>
+            <div class="module-grid">
+                <a href="team.html" class="module-card">
+                    <span class="module-icon">👥</span>
+                    <h3>队员介绍</h3>
+                    <p>分工职责</p>
+                </a>
+                <a href="weather.html" class="module-card">
+                    <span class="module-icon">🌤️</span>
+                    <h3>天气预报</h3>
+                    <p>三城天气</p>
+                </a>
+                <a href="train.html" class="module-card">
+                    <span class="module-icon">🚄</span>
+                    <h3>交通攻略</h3>
+                    <p>高铁+市内</p>
+                </a>
+                <a href="food.html" class="module-card">
+                    <span class="module-icon">🍜</span>
+                    <h3>美食推荐</h3>
+                    <p>海鲜小吃</p>
+                </a>
+                <a href="photo.html" class="module-card">
+                    <span class="module-icon">📸</span>
+                    <h3>拍照打卡</h3>
+                    <p>出片地点</p>
+                </a>
+                <a href="hotel.html" class="module-card">
+                    <span class="module-icon">🏨</span>
+                    <h3>住宿推荐</h3>
+                    <p>海景酒店</p>
+                </a>
+                <a href="packing.html" class="module-card">
+                    <span class="module-icon">🎒</span>
+                    <h3>行李清单</h3>
+                    <p>打包必备</p>
+                </a>
+                <a href="budget.html" class="module-card">
+                    <span class="module-icon">💰</span>
+                    <h3>费用预算</h3>
+                    <p>透明消费</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>胶东半岛之旅 · 2026年6月2-7日</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">👥 如也(北京) · 本心(天津) · 秋凉(合肥) · 羲知(杭州)</p>
+    </footer>
+</body>
+</html>

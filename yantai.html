@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏝️ 烟台行程 - 胶东半岛之旅</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page-styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo yantai">🏝️ 烟台攻略</div>
+        <div class="nav-links">
+            <a href="index.html">🏠 首页</a>
+            <a href="team.html">👥 队员</a>
+            <a href="weather.html">🌤️ 天气</a>
+            <a href="train.html">🚄 交通</a>
+            <a href="food.html">🍜 美食</a>
+            <a href="photo.html">📸 拍照</a>
+            <a href="hotel.html">🏨 住宿</a>
+            <a href="packing.html">🎒 清单</a>
+            <a href="budget.html">💰 预算</a>
+        </div>
+    </nav>
+
+    <header class="page-header yantai">
+        <div class="page-header-content">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+            <h1>🏝️ 烟台 · 养马岛 & 渔人码头</h1>
+            <p class="page-subtitle">Day 4-5 · 6月5日-6月6日</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">📍 必打卡景点</h2>
+            <div class="spot-grid">
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/ZM8b1wVkyO') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>🐴 养马岛</h3>
+                        <p class="spot-desc">中国马尔代夫 · 果冻海</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 2-3小时</span>
+                            <span>🎫 免费</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/CXJG1wVkyb') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>🏛️ 渔人码头</h3>
+                        <p class="spot-desc">胶东特色建筑 · 海上布拉格</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 1-2小时</span>
+                            <span>🎫 免费</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📸 养马岛环岛打卡点</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/rPP21wVkyb') center/cover;"></div>
+                    <p>🐴 果冻海 - 绝美玻璃海</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/8jlV1wVkyb') center/cover;"></div>
+                    <p>🪨 莲花夕照 - 网红洞穴</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/isS61wVkyb') center/cover;"></div>
+                    <p>🛤️ 红色栈道 - 出片圣地</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/XQTN1wVkyb') center/cover;"></div>
+                    <p>🌅 秦风崖 - 日落绝佳</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📸 渔人码头打卡点</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/Gfu51wVkyb') center/cover;"></div>
+                    <p>🏛️ 欧式建筑 - 布拉格风情</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/Tdjo1wVkyb') center/cover;"></div>
+                    <p>🚂 千与千寻轨道 - 动漫同款</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/tS2g1wVkyb') center/cover;"></div>
+                    <p>🌊 观海平台 - 碧海蓝天</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/KXv31wVkyb') center/cover;"></div>
+                    <p>🦋 鲸鱼雕像 - 码头地标</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section map-section">
+            <h2 class="section-title">🗺️ 烟台景点地图</h2>
+            <div class="map-container large">
+                <div id="map-yantai"></div>
+            </div>
+            <div class="map-tips">
+                <h4>📍 打卡小贴士</h4>
+                <ul>
+                    <li><strong>养马岛</strong>：推荐从西门进入，租电动车环岛（¥40/小时），逆时针游览</li>
+                    <li><strong>必打卡点</strong>：獐岛 → 海螺洞穴 → 红色栈道 → 秦风崖日落</li>
+                    <li><strong>渔人码头</strong>：傍晚时分光线最佳，可拍海上日落</li>
+                    <li><strong>美食推荐</strong>：荣祥海鲜坊、渔家灯火</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section schedule-mini">
+            <h2 class="section-title">📅 详细行程</h2>
+            <div class="mini-timeline">
+                <div class="mini-item">
+                    <div class="mini-time">Day 4</div>
+                    <div class="mini-content">
+                        <h4>6月5日 · 从威海前往烟台</h4>
+                        <ul>
+                            <li>🕖 07:30 退房出发</li>
+                            <li>🕘 09:00 威海 → 烟台（高铁1h）</li>
+                            <li>🏨 入住烟台金海岸希尔顿酒店</li>
+                            <li>🕙 10:00 养马岛环岛骑行</li>
+                            <li>🕛 12:30 岛上渔家乐午餐</li>
+                            <li>🕑 14:00 渔人码头漫步</li>
+                            <li>🕕 18:00 返回酒店休息</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mini-item">
+                    <div class="mini-time">Day 5</div>
+                    <div class="mini-content">
+                        <h4>6月6日 · 烟台深度游 & 返程</h4>
+                        <ul>
+                            <li>🕘 09:00 养马岛深度游（果冻海）</li>
+                            <li>🕛 12:00 午餐：烟台老菜馆</li>
+                            <li>🕑 14:00 渔人码头/滨海中路</li>
+                            <li>🕓 16:00 自由活动/采购伴手礼</li>
+                            <li>🕔 18:00 烟台返程各地</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="page-nav">
+        <a href="weihai.html" class="nav-btn prev">← 威海行程</a>
+        <a href="jinan.html" class="nav-btn next">🏯 济南行程 →</a>
+    </nav>
+
+    <footer class="footer">
+        <p>胶东半岛之旅 · 2026年6月2-7日</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const yantaiMap = L.map('map-yantai', {
+            center: [37.5, 121.45],
+            zoom: 11,
+            scrollWheelZoom: true
+        });
+        
+        L.tileLayer('https://webst0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+            subdomains: "1234"
+        }).addTo(yantaiMap);
+
+        const yantaiSpots = [
+            { name: '🏨 烟台希尔顿', coords: [37.5128, 121.4476], type: 'hotel' },
+            { name: '🐴 养马岛', coords: [37.4655, 121.5263], type: 'spot' },
+            { name: '🏛️ 渔人码头', coords: [37.5378, 121.3955], type: 'spot' }
+        ];
+
+        yantaiSpots.forEach(spot => {
+            const color = spot.type === 'hotel' ? '#764ba2' : '#00B4D8';
+            L.circleMarker(spot.coords, {
+                radius: 10,
+                fillColor: color,
+                color: '#fff',
+                weight: 2,
+                fillOpacity: 0.9
+            }).addTo(yantaiMap).bindPopup(`<b>${spot.name}</b>`);
+        });
+
+        L.polyline([
+            [37.5128, 121.4476], [37.5378, 121.3955], [37.4655, 121.5263]
+        ], { color: '#00B4D8', weight: 3, dashArray: '8,8' }).addTo(yantaiMap);
+    </script>
+</body>
+</html>

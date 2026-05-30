@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏛️ 青岛行程 - 胶东半岛之旅</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page-styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo qingdao">🏛️ 青岛攻略</div>
+        <div class="nav-links">
+            <a href="index.html">🏠 首页</a>
+            <a href="team.html">👥 队员</a>
+            <a href="weather.html">🌤️ 天气</a>
+            <a href="train.html">🚄 交通</a>
+            <a href="food.html">🍜 美食</a>
+            <a href="photo.html">📸 拍照</a>
+            <a href="hotel.html">🏨 住宿</a>
+            <a href="packing.html">🎒 清单</a>
+            <a href="budget.html">💰 预算</a>
+        </div>
+    </nav>
+
+    <header class="page-header qingdao">
+        <div class="page-header-content">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+            <h1>🏛️ 青岛 · 老城区 & 海岸线</h1>
+            <p class="page-subtitle">Day 1-2 · 6月2日-6月3日</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">📍 必打卡景点</h2>
+            <div class="spot-grid">
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/Vrfk1wVkyR') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>⛪ 圣弥厄尔大教堂</h3>
+                        <p class="spot-desc">百年哥特式建筑 · 青岛地标</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 1小时</span>
+                            <span>🎫 免费/10元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/78451wVkyR') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>🌊 五四广场</h3>
+                        <p class="spot-desc">五月的风 · 城市地标</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 1-2小时</span>
+                            <span>🎫 免费</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-card featured">
+                    <div class="spot-image" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/T6461wVkyR') center/cover;"></div>
+                    <div class="spot-info">
+                        <h3>🌉 栈桥 & 回澜阁</h3>
+                        <p class="spot-desc">青岛第一景 · 长虹远引</p>
+                        <div class="spot-details">
+                            <span>⏱️ 建议游玩 1小时</span>
+                            <span>🎫 免费</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📸 老城区Citywalk打卡点</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/SBi61wVkyR') center/cover;"></div>
+                    <p>⛪ 天主教堂 - 哥特式建筑</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/Bs8u1wVkyR') center/cover;"></div>
+                    <p>🔴 大学路红墙 - 网红打卡</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/jzVD1wVkyR') center/cover;"></div>
+                    <p>⛰️ 信号山 - 俯瞰老城</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/hy4o1wVkyR') center/cover;"></div>
+                    <p>🏛️ 里院 - 老青岛烟火</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📸 海岸线打卡点</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/qMTt1wVkyR') center/cover;"></div>
+                    <p>🌉 栈桥 - 青岛标志</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/LL1U1wVkyR') center/cover;"></div>
+                    <p>🔴 五月的风 - 红色雕塑</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/RbWo1wVkyR') center/cover;"></div>
+                    <p>🌊 爱心树 - 第一海水浴场</p>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" style="background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://aka.doubaocdn.com/s/afdv1wVkyR') center/cover;"></div>
+                    <p>🌅 日落晚霞 - 橘子海</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section map-section">
+            <h2 class="section-title">🗺️ 青岛景点地图</h2>
+            <div class="map-container large">
+                <div id="map-qingdao"></div>
+            </div>
+            <div class="map-tips">
+                <h4>📍 Citywalk路线推荐</h4>
+                <ul>
+                    <li><strong>老城区线路</strong>：栈桥 → 天主教堂 → 中山路 → 里院 → 大学路红墙 → 信号山</li>
+                    <li><strong>必打卡点</strong>：红墙（漫画路）、信号山俯瞰全景、小青岛</li>
+                    <li><strong>海岸线</strong>：五四广场 → 奥帆中心 → 情人坝 → 灯塔</li>
+                    <li><strong>美食推荐</strong>：营口路农贸市场（买海鲜+啤酒屋加工）</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section schedule-mini">
+            <h2 class="section-title">📅 详细行程</h2>
+            <div class="mini-timeline">
+                <div class="mini-item">
+                    <div class="mini-time">Day 1</div>
+                    <div class="mini-content">
+                        <h4>6月2日 · 集合日</h4>
+                        <ul>
+                            <li>🚄 各地 → 青岛（推荐车次）</li>
+                            <li>🏨 入住青岛香格里拉大酒店</li>
+                            <li>🕚 11:00 天主教堂 → 老城区Citywalk</li>
+                            <li>🕐 13:00 午餐：1903青岛老味道</li>
+                            <li>🕑 14:00 大学路红墙、鱼山路</li>
+                            <li>🕖 19:00 营口路海鲜市场晚餐</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mini-item">
+                    <div class="mini-time">Day 2</div>
+                    <div class="mini-content">
+                        <h4>6月3日 · 海岸线 & 返程</h4>
+                        <ul>
+                            <li>🕘 09:00 五四广场 → 奥帆中心</li>
+                            <li>🕛 12:00 午餐：前海沿老青岛味道</li>
+                            <li>🕑 14:00 栈桥 → 回澜阁</li>
+                            <li>🕓 16:30 信号山公园（日落）</li>
+                            <li>🕕 18:30 青岛 → 威海（高铁2h）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="page-nav">
+        <a href="weihai.html" class="nav-btn next">🌅 威海行程 →</a>
+    </nav>
+
+    <footer class="footer">
+        <p>胶东半岛之旅 · 2026年6月2-7日</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const qingdaoMap = L.map('map-qingdao', {
+            center: [36.07, 120.35],
+            zoom: 13,
+            scrollWheelZoom: true
+        });
+        
+        L.tileLayer('https://webst0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+            subdomains: "1234"
+        }).addTo(qingdaoMap);
+
+        const qingdaoSpots = [
+            { name: '🏨 青岛香格里拉', coords: [36.0680, 120.3800], type: 'hotel' },
+            { name: '⛪ 天主教堂', coords: [36.0706, 120.3192], type: 'spot' },
+            { name: '📍 大学路红墙', coords: [36.0660, 120.3340], type: 'spot' },
+            { name: '🌊 五四广场', coords: [36.0664, 120.3828], type: 'spot' },
+            { name: '🌉 栈桥', coords: [36.0685, 120.3155], type: 'spot' },
+            { name: '⛰️ 信号山', coords: [36.0620, 120.3220], type: 'spot' },
+            { name: '🦐 营口路市场', coords: [36.0610, 120.3240], type: 'food' }
+        ];
+
+        qingdaoSpots.forEach(spot => {
+            const color = spot.type === 'hotel' ? '#764ba2' : '#FF6B6B';
+            L.circleMarker(spot.coords, {
+                radius: 10,
+                fillColor: color,
+                color: '#fff',
+                weight: 2,
+                fillOpacity: 0.9
+            }).addTo(qingdaoMap).bindPopup(`<b>${spot.name}</b>`);
+        });
+
+        L.polyline([
+            [36.0680, 120.3800], [36.0706, 120.3192], [36.0660, 120.3340], [36.0610, 120.3240], [36.0620, 120.3220], [36.0685, 120.3155], [36.0664, 120.3828]
+        ], { color: '#FF6B6B', weight: 3, dashArray: '8,8' }).addTo(qingdaoMap);
+    </script>
+</body>
+</html>
